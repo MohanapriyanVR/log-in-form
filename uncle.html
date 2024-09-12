@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="uncle.css">
+</head>
+<body>
+    <div class="container bg-info-subtle mt-5 w-50 " >
+        
+        <form id="logginform">
+        
+            <div><h2 class="text-center w-100 bg-info p-4">LoggIn Page</h2></div>
+          <input id="fname" class="w-75 mt-1" type="text" placeholder="Enter your first name uncle" required> <br>
+          <input id="lname" class="w-75 mt-1" type="text" placeholder="Enter your last name uncle " required> <br>
+          <input id="number" class="w-75 mt-1" type="number" placeholder="Enter phone number" required><br>
+          <input id="mail" class="w-75 mt-1" type="email" placeholder="Enter your mail" required><br>
+          <select id="gender" class="mt-1" >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+          </select><br>
+          <textarea id="address" class="w-100 mt-1" placeholder="Enter your adress" required></textarea>
+
+
+          <button id="savebtn" class="p-1 btn btn-primary text-white mt-1">Save</button>
+          <button id="resetbtn" class="p-1 btn btn-primary text-white mt-1">reset</button>
+        </form>
+        
+    </div>
+    <script>
+
+        var fname=document.getElementById("fname")
+        var lname=document.getElementById("lname")
+        var number=document.getElementById("number")
+        var mail=document.getElementById("mail")
+        var gender=document.getElementById("gender")
+        var address=document.getElementById("address")
+        var savebtn=document.getElementById("savebtn")
+
+        document.getElementById("savebtn").addEventListener('click',function(event){
+            event.preventDefault()
+            console.log('First name =' +fname.value)
+            console.log('Last name =' +lname.value)
+            console.log('Phone Number =' +number.value)
+            console.log('Mail =' +mail.value)
+            console.log('gender  =' +gender.value)
+            console.log('Address =' +address.value)
+            
+
+        })
+        document.getElementById("resetbtn").addEventListener('click',function(){
+             document.getElementById("logginform").reset()
+        })
+
+    </script>
+</body>
+<script src="uncle.js"></script>
+</html>
